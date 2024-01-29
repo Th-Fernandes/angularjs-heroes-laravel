@@ -2,12 +2,12 @@ angular
     .module("myApp", [
         "ngRoute",
         "ngResource",
-        "myApp.signIn",
         "myApp.layout.header",
         "myApp.auth",
         "myApp.core.services.pageErrorsHandlerService",
         "myApp.dashboard",
         "myApp.core.components",
+        "myApp.heroes.service",
     ])
     .run([
         "AuthService",
