@@ -30,6 +30,7 @@
         <script type="module" src="/js/core/services/auth/auth.module.js"></script>
         <script type="module" src="/js/core/services/page-errors-handler/page-errors-handler.module.js"></script>
         <script type="module" src="/js/core/services/heroes/heroes.module.js"></script>
+        <script type="module" src="/js/core/services/opportunities/opportunities.service.js"></script>
         <!--components-->
         <script type="module" type="module" src="/js/core/layout/header.component.js"></script>
         <script type="module" src="/js/core/components/core-components.js"></script>

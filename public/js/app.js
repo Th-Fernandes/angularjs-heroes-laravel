@@ -8,6 +8,7 @@ angular
         "myApp.dashboard",
         "myApp.core.components",
         "myApp.heroes.service",
+        "myApp.opportunitiesService",
     ])
     .run([
         "AuthService",
