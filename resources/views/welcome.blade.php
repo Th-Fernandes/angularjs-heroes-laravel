@@ -34,5 +34,6 @@
         <script type="module" type="module" src="/js/core/layout/header.component.js"></script>
         <script type="module" src="/js/core/components/core-components.js"></script>
         <script type="module" src="/js/core/components/page-errors-handler/page-errors-handler.component.js"></script>
+        <script type="module" src="/js/feature/dashboard/components/last-created-hero.component.js"></script>
     </body>
 </html>

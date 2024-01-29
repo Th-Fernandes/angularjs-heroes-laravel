@@ -1,7 +1,7 @@
 angular
   .module("myApp.dashboard", [
     "ngRoute",
-    // 'myApp.dashboard.lastCreatedHeroComponent',
+    'myApp.dashboard.lastCreatedHeroComponent',
     // 'myApp.dashboard.heroOpportunitiesComponent'
   ])
   .config(($routeProvider) => {
@@ -9,7 +9,7 @@ angular
       .when("/dashboard", {
         template:  
         '<page-errors-handler>' +
-          'hi world of mine' +
+          '<last-created-hero></last-created-hero>'+
         '</page-errors-handler>'
         // '<page-errors-handler>'+ 
         //   '<last-created-hero></last-created-hero>'+ 

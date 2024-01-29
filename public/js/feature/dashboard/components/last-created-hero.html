@@ -1,0 +1,7 @@
+<section>
+  <h2 ng-if="$ctrl.hero.isFetchLoading">Loading...</h2>
+  <h2 ng-if="$ctrl.hero.data">
+    {{$ctrl.hero.data.name.first}} {{$ctrl.hero.data.name.last}} was
+    the last created hero
+  </h2>
+</section>
