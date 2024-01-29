@@ -25,10 +25,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.0/angular-ui-router.min.js" integrity="sha512-BWLZUPMCCZGKazkRadkF9YXKQcVv1uAsyfvVx7T6pojT72iTrD6wegUBpaF8H3dCpLOeMDeXu+W58qgqZ0iwvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="module" src="/js/app.js"></script>
         <script type="module" src="/js/signIn.js"></script>
-        <!--components-->
-        <script type="module" type="module" src="/js/core/layout/header.component.js"></script>
+        <!--Route features-->
+        <script type="module" src="/js/feature/dashboard/dashboard.config.js"></script>
         <!--services-->
         <script type="module" src="/js/core/services/auth/auth.module.js"></script>
         <script type="module" src="/js/core/services/page-errors-handler/page-errors-handler.module.js"></script>
+        <!--components-->
+        <script type="module" type="module" src="/js/core/layout/header.component.js"></script>
+        <script type="module" src="/js/core/components/core-components.js"></script>
+        <script type="module" src="/js/core/components/page-errors-handler/page-errors-handler.component.js"></script>
     </body>
 </html>

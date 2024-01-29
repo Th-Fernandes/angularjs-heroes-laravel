@@ -6,6 +6,8 @@ angular
         "myApp.layout.header",
         "myApp.auth",
         "myApp.core.services.pageErrorsHandlerService",
+        "myApp.dashboard",
+        "myApp.core.components",
     ])
     .run([
         "AuthService",
