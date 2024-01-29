@@ -29,5 +29,6 @@
         <script type="module" type="module" src="/js/core/layout/header.component.js"></script>
         <!--services-->
         <script type="module" src="/js/core/services/auth/auth.module.js"></script>
+        <script type="module" src="/js/core/services/page-errors-handler/page-errors-handler.module.js"></script>
     </body>
 </html>
