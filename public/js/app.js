@@ -9,6 +9,7 @@ angular
         "myApp.core.components",
         "myApp.heroes.service",
         "myApp.opportunitiesService",
+        "myApp.heroes",
     ])
     .run([
         "AuthService",
