@@ -2,6 +2,7 @@ angular
     .module("myApp", [
         "ngRoute",
         "ngResource",
+        "ngMessages",
         "myApp.layout.header",
         "myApp.auth",
         "myApp.core.services.pageErrorsHandlerService",
@@ -10,6 +11,7 @@ angular
         "myApp.heroes.service",
         "myApp.opportunitiesService",
         "myApp.heroes",
+        "myApp.opportunities",
     ])
     .run([
         "AuthService",
