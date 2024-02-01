@@ -36,5 +36,6 @@
         <script type="module" src="/js/core/components/core-components.js"></script>
         <script type="module" src="/js/core/components/page-errors-handler/page-errors-handler.component.js"></script>
         <script type="module" src="/js/feature/dashboard/components/last-created-hero.component.js"></script>
+        <script type="module" src="/js/feature/dashboard/components/signed-in-hero-opportunities.component.js"></script>        
     </body>
 </html>
