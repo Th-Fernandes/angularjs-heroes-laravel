@@ -22,8 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js" integrity="sha512-8HMKqVxk5EaXfHPCUE6YwxvObaL288uUUKL5JA7Py7DKmHaox9DJmKUuUJIX4l8vvyuwjKBmGFrGYBALXVtYFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.7.5/angular-route.min.js" integrity="sha512-wcLvfyuqjF3dvC2eg3V3SIUoAafQO8Nkrb8VPmaKgv+IW2J4vP5bFv71GGxChyyTCL/ViggVNvuZ3uu8WKlbBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.7.5/angular-resource.min.js" integrity="sha512-PK7RpL0pJr+SB/HESItDG4s/UlFJk/JOg+i4cypqZcGtvyf1AfIyGNCGhw/tjMyXbtsRMyIkmhZiTyz7QdFF0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="/js/app.js"></script>
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.8.3/angular-messages.js"></script>
+    <script type="module" src="/js/app.js"></script>
     <!--Third party libs -->
     <script type="module" src="https://unpkg.com/uuid@8.1.0/dist/umd/uuidv4.min.js"></script>
     <!--Route features-->
@@ -31,6 +31,7 @@
     <script type="module" src="/js/feature/heroes/heroes.config.js"></script>
     <script type="module" src="/js/feature/opportunities/opportunities.config.js"></script>
     <script type="module" src="/js/feature/sign-in/sign-in.config.js"></script>
+    <script type="module" src="/js/feature/sign-up/sign-up.config.js"></script>
     <!--services-->
     <script type="module" src="/js/core/services/auth/auth.module.js"></script>
     <script type="module" src="/js/core/services/page-errors-handler/page-errors-handler.module.js"></script>
@@ -50,6 +51,7 @@
     <script type="module" src="/js/feature/opportunities/components/opportunities-list/opportunities-list.component.js"></script>
     <script type="module" src="/js/feature/opportunities/components/publish-opportunity-form/publish-opportunity-form.component.js"></script>
     <script type="module" src="/js/feature/sign-in/components/sign-in/sign-in.component.js"></script>
+    <script type="module" src="/js/feature/sign-up/components/sign-up/sign-up-form.component.js"></script>
 </body>
 
 </html>
