@@ -12,6 +12,7 @@ angular
         "myApp.opportunitiesService",
         "myApp.heroes",
         "myApp.opportunities",
+        "myApp.signIn",
     ])
     .run([
         "AuthService",
