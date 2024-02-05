@@ -10,10 +10,18 @@ class Hero extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'name',
         'photo',
         'codename',
         'phoneNumber',
         'email',
+        'password',
     ];
+
+    protected $hidden = [
+
+    ];
+    public $incrementing = false;
+    protected $keyType = 'string';
 }
