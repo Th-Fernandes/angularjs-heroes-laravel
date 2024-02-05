@@ -29,15 +29,10 @@ export class AuthService {
 
     signIn({ email, password }) {
         const queryUrl =
-            this.API_ENDPOINTS.HEROES + `?email=${email}&password=${password}`;
+            this.API_ENDPOINTS.HEROES + `/isValid?email=${email}&password=${password}`;
 
-        return this.$resource(queryUrl)
-            .query()
-            .$promise.catch(() => this.$q.reject("API OFF"))
-            .then((res) => {
-                if (!res[0]) return this.$q.reject("user not found");
-                return res;
-            })
+        return this.$resource(queryUrl).save().$promise
+            .catch((e) => this.$q.reject("API OFF: ", e))
             .then((res) => {
                 const signedInUserId = res[0].id;
                 this.JwtService.storeOnClient(signedInUserId);

@@ -24,7 +24,7 @@ angular
         },
     ])
     .constant("API_ENDPOINTS", {
-        HEROES: "http://localhost:3000/heroes",
+        HEROES: "http://localhost:8000/api/heroes",
         OPPORTUNITIES: "http://localhost:3000/opportunities",
     })
     .config([

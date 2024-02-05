@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HeroController;
+use App\Http\Controllers\HeroQueryController;
+use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::resource('/api/heroes', HeroController::class)
-    ->only(['index', 'store']);
+    ->only(['index', 'store', 'show']);
 
-
+Route::resource('/api/heroes/isValid', HeroQueryController::class);
