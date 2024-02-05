@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HeroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('/api/heroes', HeroController::class)
+    ->only(['index', 'store']);
+
+
