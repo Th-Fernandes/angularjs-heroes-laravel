@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,8 +20,9 @@ class Hero extends Model
         'password',
     ];
 
-    protected $hidden = [
-
+    protected $hidden = [];
+    protected $casts = [
+        'name' => 'json', 
     ];
     public $incrementing = false;
     protected $keyType = 'string';

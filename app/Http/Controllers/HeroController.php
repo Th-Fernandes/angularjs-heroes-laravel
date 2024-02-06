@@ -38,6 +38,8 @@ class HeroController extends Controller
                 'email' => 'required|string|max:255',
                 'password' => 'required|string|max:255',
             ]);
+            $validate['name'] = json_encode($request->name);
+            $validate['gender'] = $request->gender;
             $validate['id'] = \Illuminate\Support\Str::uuid()->toString();
 
             Hero::create($validate);
