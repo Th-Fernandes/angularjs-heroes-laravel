@@ -5,6 +5,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Hero extends Model
 {
@@ -22,8 +23,13 @@ class Hero extends Model
 
     protected $hidden = [];
     protected $casts = [
-        'name' => 'json', 
+        'name' => 'json',
     ];
     public $incrementing = false;
     protected $keyType = 'string';
+
+    public function Opportunities(): HasMany
+    {
+        return $this->hasMany(Opportunity::class, 'hero_id');
+    }
 }
