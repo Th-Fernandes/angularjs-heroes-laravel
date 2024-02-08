@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn() => view('welcome') )
+Route::get('/', fn () => view('layouts.app'))
     ->middleware(['auth']);
 
 Route::resource('/api/heroes', HeroController::class)
