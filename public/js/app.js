@@ -12,7 +12,6 @@ angular
         "myApp.opportunitiesService",
         "myApp.heroes",
         "myApp.opportunities",
-        "myApp.signIn",
         "myApp.signUp",
     ])
     .run([

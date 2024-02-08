@@ -27,19 +27,6 @@ export class AuthService {
         });
     }
 
-    signIn({ email, password }) {
-        const queryUrl =
-            this.API_ENDPOINTS.HEROES + `/isValid?email=${email}&password=${password}`;
-
-        return this.$resource(queryUrl).save().$promise
-            .catch((e) => this.$q.reject("API OFF: ", e))
-            .then((res) => {
-                const signedInUserId = res[0].id;
-                this.JwtService.storeOnClient(signedInUserId);
-                return this.$q.resolve(true);
-            });
-    }
-
     signPromiseFactory() {
         return { isLoading: false, errorMessage: null };
     }
