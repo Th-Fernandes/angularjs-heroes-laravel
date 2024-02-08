@@ -25,7 +25,7 @@ angular
     ])
     .constant("API_ENDPOINTS", {
         HEROES: "http://localhost:8000/api/heroes",
-        OPPORTUNITIES: "http://localhost:3000/opportunities",
+        OPPORTUNITIES: "http://localhost:8000/api/opportunities",
     })
     .config([
         "$locationProvider",
