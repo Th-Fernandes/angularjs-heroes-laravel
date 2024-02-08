@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\HeroController;
+use App\Http\Controllers\HeroQueryController;
+use App\Http\Controllers\OpportunityController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,12 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', fn() => view('welcome') )
+    ->middleware(['auth']);
 
 Route::resource('/api/heroes', HeroController::class)
-    ->only(['index', 'store']);
+    ->only(['index', 'store', 'show']);
+
+Route::resource('/api/heroes/isValid', HeroQueryController::class);
+
+Route::resource('/api/opportunities', OpportunityController::class)
+    ->middleware(['auth']);
 
 
+
+require __DIR__ . '/auth.php';

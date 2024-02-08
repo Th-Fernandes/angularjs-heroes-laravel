@@ -12,7 +12,6 @@ angular
         "myApp.opportunitiesService",
         "myApp.heroes",
         "myApp.opportunities",
-        "myApp.signIn",
         "myApp.signUp",
     ])
     .run([
@@ -24,8 +23,8 @@ angular
         },
     ])
     .constant("API_ENDPOINTS", {
-        HEROES: "http://localhost:3000/heroes",
-        OPPORTUNITIES: "http://localhost:3000/opportunities",
+        HEROES: "http://localhost:8000/api/heroes",
+        OPPORTUNITIES: "http://localhost:8000/api/opportunities",
     })
     .config([
         "$locationProvider",

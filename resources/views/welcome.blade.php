@@ -30,7 +30,7 @@
     <script type="module" src="/js/feature/dashboard/dashboard.config.js"></script>
     <script type="module" src="/js/feature/heroes/heroes.config.js"></script>
     <script type="module" src="/js/feature/opportunities/opportunities.config.js"></script>
-    <script type="module" src="/js/feature/sign-in/sign-in.config.js"></script>
+
     <script type="module" src="/js/feature/sign-up/sign-up.config.js"></script>
     <!--services-->
     <script type="module" src="/js/core/services/auth/auth.module.js"></script>
@@ -50,7 +50,6 @@
     <script type="module" src="/js/feature/opportunities/components/publish-opportunity-redirector/publish-opportunity-redirector.component.js"></script>
     <script type="module" src="/js/feature/opportunities/components/opportunities-list/opportunities-list.component.js"></script>
     <script type="module" src="/js/feature/opportunities/components/publish-opportunity-form/publish-opportunity-form.component.js"></script>
-    <script type="module" src="/js/feature/sign-in/components/sign-in/sign-in.component.js"></script>
     <script type="module" src="/js/feature/sign-up/components/sign-up/sign-up-form.component.js"></script>
 </body>
 

@@ -27,24 +27,6 @@ export class AuthService {
         });
     }
 
-    signIn({ email, password }) {
-        const queryUrl =
-            this.API_ENDPOINTS.HEROES + `?email=${email}&password=${password}`;
-
-        return this.$resource(queryUrl)
-            .query()
-            .$promise.catch(() => this.$q.reject("API OFF"))
-            .then((res) => {
-                if (!res[0]) return this.$q.reject("user not found");
-                return res;
-            })
-            .then((res) => {
-                const signedInUserId = res[0].id;
-                this.JwtService.storeOnClient(signedInUserId);
-                return this.$q.resolve(true);
-            });
-    }
-
     signPromiseFactory() {
         return { isLoading: false, errorMessage: null };
     }

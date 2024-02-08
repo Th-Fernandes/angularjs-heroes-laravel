@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hero;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
@@ -14,7 +15,7 @@ class HeroController extends Controller
      */
     public function index(): Collection
     {
-        return Hero::all();
+        return User::all();
     }
 
     /**
@@ -37,14 +38,16 @@ class HeroController extends Controller
                 'phoneNumber' => 'required|string|max:255',
                 'email' => 'required|string|max:255',
                 'password' => 'required|string|max:255',
+                'gender' => 'required'
             ]);
+            $validate['name'] = json_encode($request->name);
+            $validate['gender'] = $request->gender;
             $validate['id'] = \Illuminate\Support\Str::uuid()->toString();
-            
+
             Hero::create($validate);
 
             return Response($validate, 200)
-                    ->header('Content-Type', 'text/plain');
-            
+                ->header('Content-Type', 'text/plain');
         } catch (ValidationException $e) {
             return Response(['message' => $e->getMessage(), 'status' => $e->status], 422)
                 ->header('Content-Type', 'text/plain');
@@ -56,7 +59,7 @@ class HeroController extends Controller
      */
     public function show(Hero $hero)
     {
-        //
+        return Response($hero, 200);
     }
 
     /**
