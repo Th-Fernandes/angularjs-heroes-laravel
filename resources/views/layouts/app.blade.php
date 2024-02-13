@@ -12,7 +12,9 @@
   <header>
     <h1>testing</h1>
 
+    <a href="#!/heroes">Heroes</a>
     <a href="#!/opportunities">opportunities</a>
+    <!-- <a href="#!/"></a> -->
   </header>
 
   <ng-view>
@@ -20,8 +22,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js" integrity="sha512-8HMKqVxk5EaXfHPCUE6YwxvObaL288uUUKL5JA7Py7DKmHaox9DJmKUuUJIX4l8vvyuwjKBmGFrGYBALXVtYFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.7.5/angular-route.min.js" integrity="sha512-wcLvfyuqjF3dvC2eg3V3SIUoAafQO8Nkrb8VPmaKgv+IW2J4vP5bFv71GGxChyyTCL/ViggVNvuZ3uu8WKlbBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="/js/app.module.js"></script>
-  <script src="/js/app.config.js"></script>
+  <script src="/modules/app.module.js"></script>
+  <script src="/modules/app.config.js"></script>
+  <script src="/views/app.heroes.controller.js"></script>
+  <script src="/views/app.hero-details.controller.js"></script>
 </body>
 
 </html>
