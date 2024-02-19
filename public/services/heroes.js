@@ -2,8 +2,12 @@ angular
   .module('app.heroes.service', [])
   .factory('heroesService', 
     function($resource) {
+      let fetchedHeroes = null
+
       function heroes() {
-        return $resource('/api/heroes').query();
+        if(!fetchedHeroes)
+          fetchedHeroes = $resource("/api/heroes").query().$promise;
+        return fetchedHeroes
       }
 
       return { heroes }

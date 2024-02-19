@@ -3,8 +3,12 @@ export default angular
     .factory("opportunitiesService", [
         "$resource",
         function ($resource) {
+            let fetchedOpportunities = null;
+
             function opportunities() {
-                return $resource("/api/opportunities").query();
+                if (!fetchedOpportunities)
+                    fetchedOpportunities = $resource("/api/opportunities").query().$promise;
+                return fetchedOpportunities;
             }
 
             return {

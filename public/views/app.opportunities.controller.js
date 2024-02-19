@@ -6,6 +6,7 @@ angular
         "$scope",
         "opportunitiesService",
         function ($scope, opportunitiesService) {
-            $scope.opportunities = opportunitiesService.opportunities();
+            opportunitiesService.opportunities()
+                .then(opportunities => $scope.opportunities = opportunities);
         },
     ]);
