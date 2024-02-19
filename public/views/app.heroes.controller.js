@@ -1,8 +1,7 @@
+import "/services/heroes.js";
+
 angular
-    .module("app.heroes.controller", [])
-    .controller("app.heroes.controller", [
-        "$scope",
-        function ($scope) {
-            $scope.viewName = "heroes";
-        },
-    ]);
+    .module("app.heroes.controller", ["app.heroes.service"])
+    .controller("app.heroes.controller", function ($scope, heroesService) {
+        $scope.heroes = heroesService.heroes();
+    });

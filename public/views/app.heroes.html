@@ -1,11 +1,10 @@
 <section ng-controller="app.heroes.controller">
-    <h2>this is the {{viewName}} view!</h2>
-    <p>
-        Down the road. This is going to connect with API endpoint to fetch
-        heroes table and it will use some components and styles.
-    </p>
-
-    <button>
-      <a href="#!/heroes/1">go to hero details</a>
-    </button>
+    <ul>
+        <li ng-repeat="hero in heroes">
+            <h3>{{hero.name}}</h3>
+            <button>
+              <a ng-href="/#!/heroes/{{hero.id}}">take a look at details</a>
+            </button>
+        </li>
+    </ul>
 </section>

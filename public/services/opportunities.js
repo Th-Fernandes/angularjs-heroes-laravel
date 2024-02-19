@@ -4,7 +4,7 @@ export default angular
         "$resource",
         function ($resource) {
             function opportunities() {
-                return $resource("localhost:8000/api/opportunities").query();
+                return $resource("/api/opportunities").query();
             }
 
             return {
