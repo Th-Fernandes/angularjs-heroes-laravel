@@ -31,10 +31,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.7.5/angular-route.min.js" integrity="sha512-wcLvfyuqjF3dvC2eg3V3SIUoAafQO8Nkrb8VPmaKgv+IW2J4vP5bFv71GGxChyyTCL/ViggVNvuZ3uu8WKlbBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.7.5/angular-resource.min.js" integrity="sha512-PK7RpL0pJr+SB/HESItDG4s/UlFJk/JOg+i4cypqZcGtvyf1AfIyGNCGhw/tjMyXbtsRMyIkmhZiTyz7QdFF0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="/modules/app.module.js"></script>
-  <script src="/modules/app.config.js"></script>
-  <script src="/views/app.heroes.controller.js"></script>
-  <script src="/views/app.hero-details.controller.js"></script>
+  <script src="/modules/app.module.js" type="module"></script>
+  <script src="/modules/app.config.js" type="module"></script>
+  <script src="/views/app.heroes.controller.js" type="module"></script>
+  <script src="/views/app.hero-details.controller.js" type="module"></script>
   <script src="/views/app.opportunities.controller.js" type="module"></script>
 </body>
 
