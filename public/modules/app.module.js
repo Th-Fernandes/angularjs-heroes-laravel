@@ -1,4 +1,4 @@
-const app = angular.module("app", ["ngRoute", "app.routes"]);
+const app = angular.module("app", ["ngRoute", "ngResource", "app.routes"]);
 
 app.config([
     "$locationProvider",
