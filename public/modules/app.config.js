@@ -3,13 +3,14 @@ angular
         "ngRoute",
         "app.heroes.controller",
         "app.hero-detail.controller",
+        "app.opportunities.controller"
     ])
     .config([
         "$routeProvider",
         function ($routeProvider) {
             $routeProvider
                 .when("/opportunities", {
-                    template: "templa resource",
+                    templateUrl: "/views/app.opportunities.html",     
                 })
                 .when("/heroes", {
                     templateUrl: "/views/app.heroes.html",

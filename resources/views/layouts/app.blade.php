@@ -5,16 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
-  <header>
-    <h1>testing</h1>
+  <header class="bg-sky-700 text-white flex flex-col sm:flex-row justify-between p-4">
+    <div class="flex flex-col sm:flex-row text-center gap-4">
+      <h1 class="text-md font-bold">ANGULARJS + LARAVEL HEROES</h1>
 
-    <a href="#!/heroes">Heroes</a>
-    <a href="#!/opportunities">opportunities</a>
-    <!-- <a href="#!/"></a> -->
+      <nav>
+        <ul class="sm:flex gap-2">
+          <li><a href="#!/heroes">Heroes</a></li>
+          <li><a href="#!/opportunities">opportunities</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <button><a href="sign-in">Sign in</a></button>
   </header>
 
   <ng-view>
@@ -26,6 +34,7 @@
   <script src="/modules/app.config.js"></script>
   <script src="/views/app.heroes.controller.js"></script>
   <script src="/views/app.hero-details.controller.js"></script>
+  <script src="/views/app.opportunities.controller.js"></script>
 </body>
 
 </html>
