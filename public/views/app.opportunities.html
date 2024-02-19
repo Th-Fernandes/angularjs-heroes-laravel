@@ -1,7 +1,9 @@
 <section ng-controller="app.opportunities.controller">
-    <h2>this is the {{viewName}} view!</h2>
-    <p>
-        Down the road, this is gonna display a list of available opportunities
-        published by heroes.
-    </p>
+    <h2>opportunities</h2>
+    <ul>
+        <li ng-repeat="opportunity in opportunities">
+            <h3>{{opportunity.title}}</h3>
+            <p>{{opportunity.description}}</p>
+        </li>
+    </ul>
 </section>
