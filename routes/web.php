@@ -3,7 +3,8 @@
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\HeroQueryController;
 use App\Http\Controllers\OpportunityController;
-use App\Http\Controllers\ProfileController;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn () => view('layouts.app'))
-    ->middleware(['auth']);
+Route::get('/', fn () => view('layouts.app'));
+// ->middleware(['auth']);
+
+Route::get('/isUserAuthorized', function () {
+    return Response()->json(['isAuth' => Auth::check()]);
+});
 
 Route::resource('/api/heroes', HeroController::class)
     ->only(['index', 'store', 'show']);
