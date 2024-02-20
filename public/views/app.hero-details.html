@@ -1,8 +1,16 @@
-<section >
-    <h2>This is the {{viewName}} View!</h2>
+<section>
+    <img src="{{hero.photo}}" alt="" />
+    <h2>{{hero.name.first}} Hero</h2>
+    <p>{{hero.codename}}, {{hero.gender || 'gender not given'}}</p>
 
-    <p>
-        Down the road, We will add some services integration and add some
-        components and styles.
-    </p>
+    <div>
+        <h3>Contact</h3>
+
+        <ul>
+            <li>
+                EMAIL:
+                <p>{{hero.email || 'not given'}}</p>
+            </li>
+        </ul>
+    </div>
 </section>
