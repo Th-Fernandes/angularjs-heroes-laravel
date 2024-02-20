@@ -13,7 +13,6 @@
   <header class="bg-sky-700 text-white flex flex-col sm:flex-row justify-between p-4">
     <div class="flex flex-col sm:flex-row text-center gap-4">
       <h1 class="text-md font-bold">ANGULARJS + LARAVEL HEROES</h1>
-
       <nav>
         <ul class="sm:flex gap-2">
           <li><a href="#!/heroes">Heroes</a></li>
@@ -22,7 +21,7 @@
       </nav>
     </div>
 
-    <button><a href="sign-in">Sign in</a></button>
+    <button><a href="login">Sign in</a></button>
   </header>
 
   <ng-view>
