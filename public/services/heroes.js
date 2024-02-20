@@ -10,5 +10,9 @@ angular
         return fetchedHeroes
       }
 
-      return { heroes }
+      function getById(id) {
+        return $resource(`/api/heroes/${id}`).get().$promise;
+      }
+
+      return { heroes, getById }
     })
