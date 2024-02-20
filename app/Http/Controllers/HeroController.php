@@ -44,7 +44,7 @@ class HeroController extends Controller
             $validate['gender'] = $request->gender;
             $validate['id'] = \Illuminate\Support\Str::uuid()->toString();
 
-            Hero::create($validate);
+            User::create($validate);
 
             return Response($validate, 200)
                 ->header('Content-Type', 'text/plain');
@@ -57,7 +57,7 @@ class HeroController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Hero $hero)
+    public function show(User $hero)
     {
         return Response($hero, 200);
     }
@@ -65,7 +65,7 @@ class HeroController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Hero $hero)
+    public function edit(User $hero)
     {
         //
     }
