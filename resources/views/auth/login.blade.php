@@ -2,13 +2,13 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}" name="signInForm">
+    <form method="POST" action="{{ route('login') }}" name="signInForm" ng-app="login" ng-controller="loginController">
         @csrf
 
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input type="email" name="email" ng-model="inputs.email.value" ng-model-options="{ debounce: 400 }" ng-pattern="inputs.email.pattern" ng-minlength="5" n g-required="true" id="email" class="block mt-1 w-full" :value="old('email')" autofocus autocomplete="username" />
+            <x-text-input type="email" name="email" ng-model="inputs.email.value" ng-model-options="{ debounce: 400 }" ng-pattern="inputs.email.pattern" ng-minlength="5" ng-required="true" id="email" class="block mt-1 w-full" :value="old('email')" autofocus autocomplete="username" />
 
             <ng-messages for="signInForm.email.$error" class="text-red-400 font-bold" role="alert" ng-cloak>
                 <ng-message when="pattern">please enter a valid email</span>
@@ -38,3 +38,18 @@
         </div>
     </form>
 </x-guest-layout>
+
+<script>
+    const loginPage = angular.module('login', ['ngMessages']);
+
+    loginPage.controller('loginController', ['$scope', function($scope) {
+        $scope.inputs = {
+            email: {
+                pattern: /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/i
+            },
+            password: {
+                pattern: /^([^A-Z]*[A-Z][^A-Z]*){2}.*$/
+            }
+        }
+    }])
+</script>
