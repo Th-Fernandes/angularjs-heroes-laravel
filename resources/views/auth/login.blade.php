@@ -38,3 +38,18 @@
         </div>
     </form>
 </x-guest-layout>
+
+<script>
+    const loginPage = angular.module('login', ['ngMessages']);
+
+    loginPage.controller('loginController', ['$scope', function($scope) {
+        $scope.inputs = {
+            email: {
+                pattern: /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/i
+            },
+            password: {
+                pattern: /^([^A-Z]*[A-Z][^A-Z]*){2}.*$/
+            }
+        }
+    }])
+</script>

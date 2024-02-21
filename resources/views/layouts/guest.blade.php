@@ -23,25 +23,6 @@
         <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
             {{ $slot }}
         </div>
-    <script>
-        const loginPage = angular.module('login', ['ngMessages']);
-
-        loginPage.controller('loginController', ['$scope', function($scope) {
-            $scope.inputs = {
-                email: {
-                    pattern: /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/i
-                },
-                password: {
-                    pattern: /^([^A-Z]*[A-Z][^A-Z]*){2}.*$/
-                }
-            }
-
-
-        }])
-    </script>
     </div>
-
-
 </body>
-
 </html>
