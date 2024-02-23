@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Hero;
 use App\Models\Opportunity;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
@@ -15,9 +14,6 @@ class OpportunityController extends Controller
     public function index()
     {
         return Opportunity::all();
-        // return view(
-        //     'opportunities.index',
-        // );
     }
 
     /**
