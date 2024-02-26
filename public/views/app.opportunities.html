@@ -1,19 +1,36 @@
-<section>
-    <h2 class="text-xl font-bold">Create your own opportunities!</h2>
-    <p>More than ever, it is easier to publish your opportunities. Do it right now in a couple of minutes!</p>
-    <button>
-        <a ng-href="/opportunities">
-            Publish opportunity
-        </a>
+<section class="mb-4">
+    <h2 class="text-2xl font-bold">Publish your own opportunities</h2>
+    <p>
+        What are you waiting for? Other heroes wants to join you and your team
+        on your mission. Let them now you are hiring!
+    </p>
+
+    <button class="border border-black rounded-md">
+        <a ng-href="/opportunities/create" class="w-full h-full p-2 block"
+            >Publish now!</a
+        >
     </button>
 </section>
 
 <section>
     <h2 class="text-xl font-bold">opportunities</h2>
-    <ul>
-        <li ng-repeat="opportunity in opportunities">
-            <h3>{{opportunity.title}}</h3>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <li
+            ng-repeat="opportunity in opportunities"
+            class="bg-blue-100 p-2 sm:p-4 rounded-lg"
+        >
+            <h3 class="text-lg font-bold">{{opportunity.title}}</h3>
             <p>{{opportunity.description}}</p>
+            <small
+                >There is {{opportunity.volunteers.length}} applied
+                volunteers</small
+            >
+            <small class="block">created at {{opportunity.createdAt}}</small>
+            <button
+                class="border border-gray-400 w-full rounded-lg p-2 mt-4 hover:bg-[#36558F] hover:text-white transition-all font-bold"
+            >
+                Apply
+            </button>
         </li>
     </ul>
 </section>
