@@ -11,5 +11,10 @@ angular
         function ($scope, heroesService, ) {
             heroesService.heroes()
                 .then((heroes) => ($scope.heroes = heroes));
+
+            $scope.setUserPhotoSrc = (photoUrl) => {
+                if(!photoUrl) return "/assets/default-user-profile-picture.webp";
+                return photoUrl
+            }
         }
     );
