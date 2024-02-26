@@ -26,8 +26,14 @@ Route::get('/isUserAuthorized', function () {
 Route::resource('/api/heroes', HeroController::class)
     ->only(['index', 'store', 'show']);
 
-Route::resource('/api/opportunities', OpportunityController::class)
-    ->middleware(['auth']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('/api/opportunities', OpportunityController::class)
+        ->only('index', 'store');
+ 
+    Route::resource('/opportunities', OpportunityController::class)
+        ->only('create');
+});
+       
 
     
 require __DIR__ . '/auth.php';

@@ -21,7 +21,7 @@ class OpportunityController extends Controller
      */
     public function create()
     {
-        //
+        return view('opportunities.create');
     }
 
     /**
