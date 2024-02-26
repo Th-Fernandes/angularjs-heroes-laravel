@@ -21,7 +21,16 @@
       </nav>
     </div>
 
-    <button><a href="login">Sign in</a></button>
+    @auth
+      <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();">
+        {{ __('Sign Out') }}
+      </a>
+      <form id="logoutForm" action="{{ route('logout') }}" method="POST" class="d-none hidden">
+    @endauth
+
+    @guest
+      <button><a href="login">Sign in</a></button>
+    @endguest
   </header>
 
   <ng-view>
