@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\HeroController;
-use App\Http\Controllers\HeroQueryController;
 use App\Http\Controllers\OpportunityController;
+use App\Http\Controllers\SubscriptionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +34,9 @@ Route::group(['middleware' => 'auth'], function () {
         ->only('create');
 });
        
+Route::resource('/api/subscriptions', SubscriptionController::class)
+    ->only(['index', 'store'])
+    ->middleware(['auth']);
 
     
 require __DIR__ . '/auth.php';
