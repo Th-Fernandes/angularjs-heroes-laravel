@@ -34,7 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
         ->only('create');
 });
        
-Route::resource('/subscriptions', SubscriptionController::class)
+Route::resource('/api/subscriptions', SubscriptionController::class)
     ->only(['index', 'store'])
     ->middleware(['auth']);
 
